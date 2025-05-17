@@ -77,10 +77,42 @@ body {
   background: rgba(0, 95, 153, 0.3);
   backdrop-filter: blur(5px);
   color: white;
-  padding: 120px 20px;
+  padding: 60px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00cfff;
+  box-shadow: 0 0 30px rgba(0, 207, 255, 0.6);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInDown 1s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 207, 255, 0.8);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-header h1 {
@@ -137,9 +169,9 @@ body {
 }
 
 .about-img {
-  width: 200px;
+  width: 300px;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 20px;
   object-fit: cover;
   border: 4px solid #00cfff;
   box-shadow: 0 0 20px rgba(0, 207, 255, 0.5);
@@ -148,7 +180,7 @@ body {
 }
 
 .about-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .about-text h2 {
